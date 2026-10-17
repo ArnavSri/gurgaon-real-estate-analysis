@@ -70,9 +70,9 @@ else:
 
 
 # 6 How does area (sqft) impact property price?        
-# sns.scatterplot(x='area', y='price', data=df)
-# plt.title('Area vs Price')
-#plt.show() 
+sns.scatterplot(x='area', y='price', data=df)
+plt.title('Area vs Price')
+plt.show() 
 
 #7 Which BHK configuration is the most expensive on average?
 most_expensive_bhk=df.groupby('bhk_count')['rate_per_sqft'].mean().idxmax() # return the BHK configuration with the highest average price
